@@ -3,9 +3,10 @@ import Clock from './Components/Clock/Clock';
 
 
 const App = () =>{
+
   return(
     <div>
-      <Clock locale='bn-BD'/>
+      <Clock locale='en-US'/>
     </div>
   )
 }
