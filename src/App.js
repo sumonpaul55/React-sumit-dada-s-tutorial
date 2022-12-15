@@ -6,7 +6,7 @@ const App = () =>{
 
   return(
     <div>
-      <Clock locale='en-US'/>
+      <Clock/>
     </div>
   )
 }
