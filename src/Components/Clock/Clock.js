@@ -1,7 +1,9 @@
 import React from 'react';
+import Button from '../Button/Button';
 import "./clock.css";
 
 class Clock extends React.Component{
+    
     state = {date: new Date(), locale:'en-US'};
     // constructor(props){
     //     super(props);
@@ -15,9 +17,9 @@ class Clock extends React.Component{
     componentWillUnmount(){
         clearInterval(this.clockTimer)
     }
-   handleclick(locale){
+   handleclick = (locale)=>{
     //e.preventDefault()//a tag has default behavior that's why used preventDefault function 
-   this.setState({locale});
+   this.setState({locale,});
    }
 
    tick(){
@@ -31,7 +33,7 @@ class Clock extends React.Component{
                <span> {date.toLocaleTimeString(locale)}</span>
                {/* <button style={{padding: '5px 10px',display: 'block',margin: '20px auto'}} type='button' onClick={this.handleclick}>Switch lang</button> */}
 <br></br>
-               <button onClick={()=>this.handleclick("bn-BD")} style={{display: 'inline-block', color: 'black',background: 'cyan',padding:'5px 10px'}}>Click here</button>
+              <Button change={this.handleclick} locale='bn-BD'></Button> {/*bind always return a new function*/}
             </div>
         )
     }
