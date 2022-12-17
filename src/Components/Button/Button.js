@@ -1,4 +1,5 @@
 import React from 'react';
+import './Button.css';
 
 class Button extends React.Component{
     shouldComponentUpdate(nextProps){
@@ -15,7 +16,7 @@ class Button extends React.Component{
     render(){
         const {change, locale} = this.props;
         return (
-        <button type='button' onClick={()=> change(locale)} style={{display: 'inline-block', color: 'black',background: 'cyan', padding:'5px 10px'}}>Click here</button>
+        <button type='button' onClick={()=> change(locale)}>Click here</button>
         )
     }
 }
