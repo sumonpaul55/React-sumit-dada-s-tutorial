@@ -24,19 +24,24 @@ class Clock extends React.Component{
    }
   
     render(){
-        const {date, locale} = this.state;
-        let button;
-        if(locale==='en-US'){
-            button = <Button change={this.handleclick} locale='bn-BD'></Button> 
-        }else{
-            button = <Button change={this.handleclick} locale='en-US'></Button> }
+         const {date, locale} = this.state;
+        // let button;
+        // if(locale==='en-US'){
+        //     button = <Button change={this.handleclick} locale='bn-BD'></Button> 
+        // }else{
+        //     button = <Button change={this.handleclick} locale='en-US'></Button> }
         return(
             <div className='watch'>
                 <h3>Smart Watch</h3>
                <span> {date.toLocaleTimeString(locale)}</span>
                {/* <button style={{padding: '5px 10px',display: 'block',margin: '20px auto'}} type='button' onClick={this.handleclick}>Switch lang</button> */}
 <br></br>
-              {button}{/*bind always return a new function*/}
+                       
+             {
+                locale === 'en-US' ? <Button change={this.handleclick} locale='bn-BD' show={false} enable/> : <Button change={this.handleclick} locale='en-US' show enable={false}/> //ternery 
+
+             }
+             {/*bind always return a new function*/}
             </div>
         )
     }
