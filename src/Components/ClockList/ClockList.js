@@ -5,7 +5,8 @@ const ClockList = ({quantity = []}) => {
     
     return (
         <div className='border'>
-            {quantity.map(() =>  <Clock/>)}
+            {quantity.map((key,index) => <Clock key={index}/>)}
+            
         </div>
     );
 };
