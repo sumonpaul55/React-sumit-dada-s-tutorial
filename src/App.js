@@ -4,13 +4,18 @@ import ClockList from './Components/ClockList/ClockList';
 
 const App = () =>{
 
-  const quantity = [1,2,3 ,4,5,6,7,8,9,10,5,3 ,2,4,2,4,3,3,3,3];
+  const quantity = [1,2,3 ,4,5,6,7,8,9,10];
 
   
   return(
-    <div className='clockitems'>
+    <>
+      <div className='clockitems'>
       <ClockList quantity={quantity}/>
     </div>
+    <div>
+      <h2 style={{textAlign: 'center'}}>this is form component</h2>
+    </div>
+    </>
   )
 }
 
