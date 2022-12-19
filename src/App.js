@@ -1,5 +1,6 @@
 import React from 'react';
 import ClockList from './Components/ClockList/ClockList';
+import Form from './Components/Form/Form';
 
 
 const App = () =>{
@@ -13,7 +14,8 @@ const App = () =>{
       <ClockList quantity={quantity}/>
     </div>
     <div>
-      <h2 style={{textAlign: 'center'}}>this is form component</h2>
+      <h2 style={{textAlign: 'center'}}>Form's default behaviur will not work for React</h2>
+      <Form/>
     </div>
     </>
   )
