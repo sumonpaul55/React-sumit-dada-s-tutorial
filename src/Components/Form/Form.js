@@ -9,23 +9,23 @@ export default class Form extends React.Component {
   };
 
   handlechange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    })
+    // this.setState({
+    //   [event.target.name]: event.target.value,
+    // }) if we want to control the simial input type
 
-    // if (event.target.type === "text") {
-    //   this.setState({
-    //     title: event.target.value,
-    //   });
-    // } else if (event.target.type === "textarea") {
-    //   this.setState({ textareatext: event.target.value });
-    // } else if (event.target.type === "select-one") {
-    //   this.setState({ library: event.target.value });
-    // } else if (event.target.type === "checkbox") {
-    //   this.setState({ checkedbox: event.target.checked });
-    // } else {
-    //   console.log("nothing here");
-    // }
+    if (event.target.type === "text") {
+      this.setState({
+        title: event.target.value,
+      });
+    } else if (event.target.type === "textarea") {
+      this.setState({ textareatext: event.target.value });
+    } else if (event.target.type === "select-one") {
+      this.setState({ library: event.target.value });
+    } else if (event.target.type === "checkbox") {
+      this.setState({ checkedbox: event.target.checked });
+    } else {
+      console.log("nothing here");
+    }
   };
   submitHandler=(event)=>{
     const { library, textareatext , title, checkedbox} = this.state;

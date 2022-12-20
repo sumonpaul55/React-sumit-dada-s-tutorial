@@ -1,5 +1,6 @@
 import React from 'react';
 import '../src/App.css';
+import CheckTemparature from './Components/Checktemparature/Checktemparature';
 import ClockList from './Components/ClockList/ClockList';
 import Form from './Components/Form/Form';
 
@@ -17,6 +18,10 @@ const App = () =>{
       <div>
       <h2 style={{textAlign: 'center'}}>Form's default behaviur will not work for React</h2>
           <Form/>
+      </div>
+      <div className='temparatureinput-main'>
+        <h1>Aplicaiton for check the water temperature</h1>
+        <CheckTemparature/> 
       </div>
     </div>
   )
