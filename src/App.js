@@ -1,4 +1,5 @@
 import React from 'react';
+import '../src/App.css';
 import ClockList from './Components/ClockList/ClockList';
 import Form from './Components/Form/Form';
 
@@ -9,15 +10,15 @@ const App = () =>{
 
   
   return(
-    <>
+    <div className='main-hero'>
       <div className='clockitems'>
       <ClockList quantity={quantity}/>
-    </div>
-    <div>
+      </div>
+      <div>
       <h2 style={{textAlign: 'center'}}>Form's default behaviur will not work for React</h2>
-      <Form/>
+          <Form/>
+      </div>
     </div>
-    </>
   )
 }
 

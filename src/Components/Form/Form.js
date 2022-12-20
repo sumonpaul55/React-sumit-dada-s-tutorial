@@ -4,19 +4,26 @@ export default class Form extends React.Component {
   state = {
     title: "Javascript",
     textareatext: "textarea text is changeing",
+    library: "Ract",
   };
 
   handlechange = (event) => {
     if (event.target.type === "text") {
-      this.setState({ title: event.target.value });
+      this.setState({
+        title: event.target.value,
+      });
     } else if (event.target.type === "textarea") {
       this.setState({ textareatext: event.target.value });
-    }else{
-        console.log('nothing here')
+    } else if (event.target.type === "select-one") {
+      this.setState({ library: event.target.value,
+      });
+    }
+    else {
+      console.log("nothing here");
     }
   };
   render() {
-    const { title,textareatext} = this.state;
+    const { title, textareatext, library } = this.state;
     return (
       <div>
         <input type="text" value={title} onChange={this.handlechange} />
@@ -24,6 +31,15 @@ export default class Form extends React.Component {
         <br />
         <textarea name="textarea" value={textareatext} onChange={this.handlechange}></textarea>
         {/* we shouldn't use inside the textarea in react ..... we should use value as type text*/}
+        <div>
+          <select value={library} onChange={this.handlechange}>
+            <option value="React">React</option>
+            <option value="Angular">Angular</option>
+            <option value="Vue js">Vue js</option>
+          </select>
+          <br /><br />
+        </div>
+
       </div>
     );
   }
