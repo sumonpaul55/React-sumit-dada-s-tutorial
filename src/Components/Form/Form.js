@@ -9,19 +9,23 @@ export default class Form extends React.Component {
   };
 
   handlechange = (event) => {
-    if (event.target.type === "text") {
-      this.setState({
-        title: event.target.value,
-      });
-    } else if (event.target.type === "textarea") {
-      this.setState({ textareatext: event.target.value });
-    } else if (event.target.type === "select-one") {
-      this.setState({ library: event.target.value });
-    } else if (event.target.type === "checkbox") {
-      this.setState({ checkedbox: event.target.checked });
-    } else {
-      console.log("nothing here");
-    }
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
+
+    // if (event.target.type === "text") {
+    //   this.setState({
+    //     title: event.target.value,
+    //   });
+    // } else if (event.target.type === "textarea") {
+    //   this.setState({ textareatext: event.target.value });
+    // } else if (event.target.type === "select-one") {
+    //   this.setState({ library: event.target.value });
+    // } else if (event.target.type === "checkbox") {
+    //   this.setState({ checkedbox: event.target.checked });
+    // } else {
+    //   console.log("nothing here");
+    // }
   };
   submitHandler=(event)=>{
     const { library, textareatext , title, checkedbox} = this.state;
@@ -35,10 +39,10 @@ export default class Form extends React.Component {
     return (
       <div>
         <form onSubmit={this.submitHandler}>
-          <input type="text" value={title} onChange={this.handlechange} />
+          <input name="title" type="text" value={title} onChange={this.handlechange} />
           <br />
           <br />
-          <textarea name="textarea" value={textareatext} onChange={this.handlechange}></textarea>
+          <textarea name="textareatext" value={textareatext} onChange={this.handlechange}></textarea>
           {/* we shouldn't use inside the textarea in react ..... we should use value as type text*/}
           <div>
             <select value={library} onChange={this.handlechange}>
