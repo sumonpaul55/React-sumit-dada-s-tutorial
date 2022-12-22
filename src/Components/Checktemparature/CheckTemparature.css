@@ -2,3 +2,7 @@
   display: inline-block;
   margin: auto;
 }
+
+.temparatureinputfield {
+  display: flex;
+}
