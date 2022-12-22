@@ -4,7 +4,6 @@ export function toCelcius(Fahrenheit) {
 export function tofahreheit(Celcius) {
     return (Celcius * 9) / 5 + 32;
 }
-
 export function convert(temparature, convertTo) {
     const input = parseFloat(temparature);
     if (Number.isNaN(input)) {
