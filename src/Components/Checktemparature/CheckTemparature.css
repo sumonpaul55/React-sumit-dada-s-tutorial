@@ -6,3 +6,10 @@
 .temparatureinputfield {
   display: flex;
 }
+fieldset {
+  width: 400px;
+}
+fieldset input {
+  padding: 10px 10px;
+  font-size: 20px;
+}
