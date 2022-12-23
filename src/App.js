@@ -2,6 +2,8 @@ import React from 'react';
 import '../src/App.css';
 import CheckTemparature from './Components/Checktemparature/Checktemparature';
 import ClockList from './Components/ClockList/ClockList';
+import Emoji from './Components/Composition/Emoji';
+import Text from './Components/Composition/Text';
 import Form from './Components/Form/Form';
 
 
@@ -23,6 +25,10 @@ const App = () =>{
         <h1>Aplicaiton for check the water temperature</h1>
         <CheckTemparature/> 
       </div>
+      <Emoji>
+        {({addEmoji})=>  <Text addEmoji={addEmoji}/>}  
+      </Emoji>
+
     </div>
   )
 }
