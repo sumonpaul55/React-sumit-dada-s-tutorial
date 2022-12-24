@@ -12,3 +12,9 @@ h2 {
   text-align: center;
   margin-top: 20px;
 }
+.click-couter {
+  text-align: center;
+  margin-top: 80px;
+  border: 1px solid;
+  padding: 50px;
+}
