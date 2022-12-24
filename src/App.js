@@ -7,8 +7,6 @@ import MouseOver from './Components/Composition/ClickCounter/MouseOver';
 import Emoji from './Components/Composition/Emoji';
 import Text from './Components/Composition/Text';
 import Form from './Components/Form/Form';
-
-
 const App = () =>{
 
   const quantity = [1,2,3 ,4,5,6,7,8,9,10];
@@ -32,8 +30,10 @@ const App = () =>{
       </Emoji>
       <div className="click-couter">
         <ClickCounter/>
-        <h6>Mouseover count</h6>
-        <MouseOver/>
+        <br />
+        <MouseOver />
+        <h6>Mouseover count Using heigher order component name is withcounter</h6>
+
       </div>
     </div>
   )
