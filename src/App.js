@@ -3,6 +3,7 @@ import '../src/App.css';
 import CheckTemparature from './Components/Checktemparature/Checktemparature';
 import ClockList from './Components/ClockList/ClockList';
 import ClickCounter from './Components/Composition/ClickCounter/ClickCounter';
+import MouseOver from './Components/Composition/ClickCounter/MouseOver';
 import Emoji from './Components/Composition/Emoji';
 import Text from './Components/Composition/Text';
 import Form from './Components/Form/Form';
@@ -31,6 +32,8 @@ const App = () =>{
       </Emoji>
       <div className="click-couter">
         <ClickCounter/>
+        <h6>Mouseover count</h6>
+        <MouseOver/>
       </div>
     </div>
   )
