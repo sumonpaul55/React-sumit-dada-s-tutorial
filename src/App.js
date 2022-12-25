@@ -2,10 +2,11 @@ import React from 'react';
 import '../src/App.css';
 import CheckTemparature from './Components/Checktemparature/Checktemparature';
 import ClockList from './Components/ClockList/ClockList';
-import ClickCounter from './Components/Composition/ClickCounter/ClickCounter';
+import ClickClounter from './Components/Composition/ClickCounter/ClickCounter';
 import MouseOver from './Components/Composition/ClickCounter/MouseOver';
 import Emoji from './Components/Composition/Emoji';
 import Text from './Components/Composition/Text';
+import Counter from './Components/Counter';
 import Form from './Components/Form/Form';
 import User from './Components/User/User';
 const App = () =>{
@@ -30,9 +31,12 @@ const App = () =>{
         {({addEmoji})=>  <Text addEmoji={addEmoji}/>}  
       </Emoji>
       <div className="click-couter">
-        <ClickCounter />
+        {/* <ClickCounter />
         <br />
-        <MouseOver />
+        <MouseOver /> */}
+        <Counter render={(count, inCreaseTime)=> <ClickClounter count={count} inCreaseTime={inCreaseTime}/>}/>
+        <Counter render={(count, inCreaseTime)=> <MouseOver count={count} inCreaseTime={inCreaseTime}/> }/>
+      
         <h6>Mouseover count Using heigher order component name is withcounter</h6>
         <User name={(isloggedIn) =>isloggedIn ? 'Sumon paul': 'Guest'}/>
       </div>
