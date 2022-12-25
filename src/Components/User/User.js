@@ -3,7 +3,7 @@ import React from 'react';
 const User = ({name}) => {
     return (
         <h2>
-           User is {name()}
+           User is {name(true)}
         </h2>
     );
 };
