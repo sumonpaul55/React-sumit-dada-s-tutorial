@@ -29,7 +29,7 @@ const App = () =>{
         {({addEmoji})=>  <Text addEmoji={addEmoji}/>}  
       </Emoji>
       <div className="click-couter">
-        <ClickCounter/>
+        <ClickCounter />
         <br />
         <MouseOver />
         <h6>Mouseover count Using heigher order component name is withcounter</h6>

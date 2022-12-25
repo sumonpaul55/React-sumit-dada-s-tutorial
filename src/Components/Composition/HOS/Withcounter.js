@@ -22,5 +22,3 @@ const Withcounter = (OriginalComponent) => {
     };
     return Newcomponent;
 };
-
-export default Withcounter;
