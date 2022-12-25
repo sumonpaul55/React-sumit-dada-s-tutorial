@@ -2,18 +2,16 @@ import React from 'react';
 import '../src/App.css';
 import CheckTemparature from './Components/Checktemparature/Checktemparature';
 import ClockList from './Components/ClockList/ClockList';
-import ClickClounter from './Components/Composition/ClickCounter/ClickCounter';
-import MouseOver from './Components/Composition/ClickCounter/MouseOver';
 import Emoji from './Components/Composition/Emoji';
+import ClickClounter from './Components/Composition/EventCounter/ClickCounter';
+import MouseOver from './Components/Composition/EventCounter/MouseOver';
 import Text from './Components/Composition/Text';
 import Counter from './Components/Counter';
 import Form from './Components/Form/Form';
 import User from './Components/User/User';
+
 const App = () =>{
-
-  const quantity = [1,2,3 ,4,5,6,7,8,9,10];
-
-  
+  const quantity = [1,2,3 ,4,5,6,7,8,9,10];  
   return(
     <div className='main-hero'>
       <div className='clockitems'>
@@ -34,8 +32,21 @@ const App = () =>{
         {/* <ClickCounter />
         <br />
         <MouseOver /> */}
-        <Counter render={(count, inCreaseTime)=> <ClickClounter count={count} inCreaseTime={inCreaseTime}/>}/>
-        <Counter render={(count, inCreaseTime)=> <MouseOver count={count} inCreaseTime={inCreaseTime}/> }/>
+        {/* <Counter render={(count, inCreaseTime)=> <ClickClounter count={count} inCreaseTime={inCreaseTime}/>}/>
+        <Counter render={(count, inCreaseTime)=> <MouseOver count={count} inCreaseTime={inCreaseTime}/> }/> */}
+        {/* <Counter>
+           {(count, inCreaseTime)=> <MouseMoveCounter count={count} inCreaseTime={inCreaseTime}/>}
+        </Counter> */}
+        <Counter>
+          {
+            (count, inCreaseTime)=> <ClickClounter count={count} inCreaseTime={inCreaseTime}/>
+          }
+        </Counter>
+        <Counter>
+          {
+            (count, inCreaseTime)=> <MouseOver count={count} inCreaseTime={inCreaseTime}/>
+          }
+        </Counter>
       
         <h6>Mouseover count Using heigher order component name is withcounter</h6>
         <User name={(isloggedIn) =>isloggedIn ? 'Sumon paul': 'Guest'}/>
