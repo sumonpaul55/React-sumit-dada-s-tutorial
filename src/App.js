@@ -34,7 +34,7 @@ const App = () =>{
         <br />
         <MouseOver />
         <h6>Mouseover count Using heigher order component name is withcounter</h6>
-        <User render={(isloggedIn) =>isloggedIn ? 'Sumon paul': 'Guest'}/>
+        <User name={(isloggedIn) =>isloggedIn ? 'Sumon paul': 'Guest'}/>
       </div>
     </div>
   )

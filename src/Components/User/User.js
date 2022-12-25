@@ -1,9 +1,9 @@
 import React from 'react';
 
-const User = ({render}) => {
+const User = ({name}) => {
     return (
         <h2>
-           User is {render(true)}
+           User is {name(true)}
         </h2>
     );
 };
