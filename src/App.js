@@ -5,6 +5,7 @@ import ClockList from './Components/ClockList/ClockList';
 import Emoji from './Components/Composition/Emoji';
 import ClickClounter from './Components/Composition/EventCounter/ClickCounter';
 import MouseOver from './Components/Composition/EventCounter/MouseOver';
+import Section from './Components/Composition/EventCounter/Section';
 import Text from './Components/Composition/Text';
 import Counter from './Components/Counter';
 import Form from './Components/Form/Form';
@@ -47,7 +48,7 @@ const App = () =>{
             (count, inCreaseTime)=> <MouseOver count={count} inCreaseTime={inCreaseTime}/>
           }
         </Counter>
-      
+      <Section/>
         <h6>Mouseover count Using heigher order component name is withcounter</h6>
         <User name={(isloggedIn) =>isloggedIn ? 'Sumon paul': 'Guest'}/>
       </div>
