@@ -26,7 +26,7 @@ const App = () =>{
         <CheckTemparature/> 
       </div>
       <Emoji>
-        {({addEmoji})=>  <Text addEmoji={addEmoji}/>}  
+        {({addEmoji})=><Text addEmoji={addEmoji}/>}
       </Emoji>
       <div className="click-couter">
         {/* <ClickCounter />
