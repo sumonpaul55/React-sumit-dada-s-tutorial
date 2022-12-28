@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import Content from './Content';
+import { MyContext } from '../../../App';
 
 class Section extends Component {
-    state = ({theme: 'dark'}
 
-)
     render() {
-        const theme = this.state;
         return (
-            <div>
+            <div style={{backgroundColor: 'lightblue', padding: '5px'}}>
                 <h1>section component</h1>
-                <Content theme={theme}/>
+                <MyContext.Consumer>
+                    {(value)=> <h1>{value}</h1>}
+                </MyContext.Consumer>
             </div>
         );
     }
