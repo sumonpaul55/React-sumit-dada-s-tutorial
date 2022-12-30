@@ -8,18 +8,19 @@ const MyCounter = () => {
     useEffect(()=> {
         console.log('updating document title');
         document.title = `Clicked ${text} `;
-    })
+    }, [text , count]) // this is defendancy array if we call it it's mean I tell him to call the function inside useeffect
 
-    const changeinput = (e)=>{
-       setText(e.target.value);
-
-    }
 
     const addClick = () =>{
         setCount((prev)=>{
             return prev + 1;
         })
     }
+
+    
+    const changeinput = (e)=>{
+        setText(e.target.value);
+     }
 
     return (
         <div>
