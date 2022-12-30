@@ -9,6 +9,7 @@ import Text from './Components/Composition/Text';
 import Context from './Components/Contexts/Context';
 import Counter from './Components/Counter';
 import Form from './Components/Form/Form';
+import MyCounter from './Components/MyCounter/MyCounter';
 import Todo from './Components/Todo/Todo';
 import User from './Components/User/User';
 
@@ -59,6 +60,9 @@ const App = () =>{
       </div>
       <div className='todo'>
           <Todo/>
+      </div>
+      <div className="mycounter">
+        <MyCounter/>
       </div>
     </div>
   )
