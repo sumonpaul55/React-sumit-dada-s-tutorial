@@ -9,11 +9,12 @@ import Text from './Components/Composition/Text';
 import Context from './Components/Contexts/Context';
 import Counter from './Components/Counter';
 import Form from './Components/Form/Form';
+import Todo from './Components/Todo/Todo';
 import User from './Components/User/User';
 
 export const MyContext = createContext();
 const App = () =>{
-  const quantity = [1,2,3 ,4,5,6];  
+  const quantity = [1,2,3 ,4,5];  
   return(
     
     <div className='main-hero'>
@@ -55,6 +56,9 @@ const App = () =>{
         </MyContext.Provider>
         <h6>Mouseover count Using heigher order component name is withcounter</h6>
         <User name={(isloggedIn) =>isloggedIn ? 'Sumon paul': 'Guest'}/>
+      </div>
+      <div className='todo'>
+          <Todo/>
       </div>
     </div>
   )
