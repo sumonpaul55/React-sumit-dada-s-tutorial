@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Counterincrease from './Counterincrease';
 import './Todo.css';
 
 const Todo = () => {
@@ -34,6 +35,7 @@ const Todo = () => {
                 <h1>Description: {description}</h1>
                 
                 <textarea name="todo" id="" cols="100" rows="2" value={description} onChange={(e)=> setObjtext({...objtest,description: e.target.value})}></textarea>
+                <Counterincrease />
             </div>
         </div>
     );
