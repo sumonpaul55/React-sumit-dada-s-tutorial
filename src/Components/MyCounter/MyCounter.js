@@ -7,8 +7,8 @@ const MyCounter = () => {
     
     useEffect(()=> {
         console.log('updating document title');
-        document.title = `Clicked ${text} `;
-    }, [text , count]) // this is defendancy array if we call it it's mean I tell him to call the function inside useeffect
+        document.title = `Clicked ${count} `;
+    }, [count]) // this is defendancy array if we call it it's mean I tell him to call the function inside useeffect
 
 
     const addClick = () =>{
