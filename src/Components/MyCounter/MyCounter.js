@@ -11,13 +11,13 @@ const MyCounter = () => {
     }, [count]) // this is defendancy array if we call it it's mean I tell him to call the function inside useeffect
 
      useEffect(() =>{
-        
-       const interval = setInterval(()=>{
+        const interval = setInterval(()=>{
             ticktick();
         console.log('ticking')
         }, 1000);
 
-        return ()=>{clearInterval(interval)}
+        return ()=>{clearInterval(interval)
+        }
      },[]);
 
 
