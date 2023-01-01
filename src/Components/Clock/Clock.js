@@ -10,7 +10,7 @@ class Clock extends React.Component{
     //     this.handleclick = this.handleclick.bind(this); // we can use arrow functions instead of bind;
     // }
    componentDidMount(){
-       this.clockTimer = setInterval(() => {this.tick();}, 1000);
+       this.clockTimer = setInterval(() => {this.tick()}, 1000);
     }
     componentWillUnmount(){
         clearInterval(this.clockTimer)

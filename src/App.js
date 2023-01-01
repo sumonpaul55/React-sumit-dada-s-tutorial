@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 import '../src/App.css';
 import CheckTemparature from './Components/Checktemparature/Checktemparature';
 import ClockList from './Components/ClockList/ClockList';
@@ -15,6 +15,9 @@ import User from './Components/User/User';
 
 export const MyContext = createContext();
 const App = () =>{
+  const [show, setShow] = useState(true);
+
+
   const quantity = [1,2,3 ,4,5];  
   return(
     
@@ -62,7 +65,11 @@ const App = () =>{
           <Todo/>
       </div>
       <div className="mycounter">
-        <MyCounter/>
+        { show && <MyCounter/>}
+        <br />
+        <button onClick={()=> setShow((prevshow)=> !prevshow)} type='button'>
+          {show ? 'Hide it': 'Show it'}
+        </button>
       </div>
     </div>
   )
