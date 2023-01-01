@@ -12,10 +12,12 @@ const MyCounter = () => {
 
      useEffect(() =>{
         
-        setInterval(()=>{
+       const interval = setInterval(()=>{
             ticktick();
         console.log('ticking')
         }, 1000);
+
+        return ()=>{clearInterval(interval)}
      },[]);
 
 
