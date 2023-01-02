@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Mybutton from './Mybutton';
 import Showcount from './Showcount';
 import Title from './Title';
@@ -8,12 +8,12 @@ const Main = () => {
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
 
-    const increamentByone = () => {
+    const increamentByone = useCallback(() => {
         setCount1((prevcoutn)=> prevcoutn+1)
-    }
-    const increamentByFive = () => {
+    },[])
+    const increamentByFive = useCallback(() => {
         setCount2((prevcoutn)=> prevcoutn + 5)
-    }
+    },[])
     return ( 
         <div>
             <Title/>

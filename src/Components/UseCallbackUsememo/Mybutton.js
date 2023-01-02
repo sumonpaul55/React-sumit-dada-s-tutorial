@@ -12,4 +12,4 @@ const Mybutton = ({handleclick, children}) => {
     );
 };
 
-export default Mybutton;
+export default React.memo(Mybutton);
