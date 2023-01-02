@@ -11,6 +11,7 @@ import Counter from './Components/Counter';
 import Form from './Components/Form/Form';
 import MyCounter from './Components/MyCounter/MyCounter';
 import Todo from './Components/Todo/Todo';
+import Main from './Components/UseCallbackUsememo/Main';
 import User from './Components/User/User';
 
 export const MyContext = createContext();
@@ -70,6 +71,10 @@ const App = () =>{
         <button onClick={()=> setShow((prevshow)=> !prevshow)} type='button'>
           {show ? 'Hide it': 'Show it'}
         </button>
+      </div>
+
+      <div className="callbackcallmenu">
+        <Main/>
       </div>
     </div>
   )
