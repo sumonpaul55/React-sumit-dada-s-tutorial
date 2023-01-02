@@ -4,6 +4,7 @@ import Showcount from './Showcount';
 import Title from './Title';
 
 const Main = () => {
+    console.log('main js rendered')
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
 
@@ -16,17 +17,13 @@ const Main = () => {
     return ( 
         <div>
             <Title/>
-
-           
-           <Showcount count={count1} title='counte by 1' />
-           <Mybutton handleclick={increamentByone}>Increment by one </Mybutton>
+            <Showcount count={count1} title='counte by 1' />
+            <Mybutton handleclick={increamentByone}>Increment by one </Mybutton>
             <hr />
-           <Showcount count={count2}  title='count by 5'/>
-           <Mybutton handleclick={increamentByFive}>Increment by five</Mybutton>
-           
-            
+            <Showcount count={count2}  title='count by 5'/>
+            <Mybutton handleclick={increamentByFive}>Increment by five</Mybutton>
         </div>
     );
 };
 
-export default Main;
+export default React.memo(Main);

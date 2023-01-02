@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Showcount = ({title, count}) => {
-    
+    console.log('showcount js rendered')
     return (
         <div>
             <h2>{title} is {count}</h2>
@@ -10,4 +10,4 @@ const Showcount = ({title, count}) => {
     );
 };
 
-export default Showcount;
+export default React.memo(Showcount);

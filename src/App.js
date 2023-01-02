@@ -16,9 +16,10 @@ import User from './Components/User/User';
 
 export const MyContext = createContext();
 const App = () =>{
+
+  console.log('app is rendered')
+
   const [show, setShow] = useState(true);
-
-
   const quantity = [1,2,3 ,4,5];  
   return(
     

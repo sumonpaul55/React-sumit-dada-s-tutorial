@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Title = () => {
+    console.log('title rendered')
     return (
         <div>
             <h1>Callback and callmenu tutorial title</h1>
@@ -8,4 +9,4 @@ const Title = () => {
     );
 };
 
-export default Title;
+export default React.memo(Title);
