@@ -9,6 +9,7 @@ import Text from './Components/Composition/Text';
 import Context from './Components/Contexts/Context';
 import Counter from './Components/Counter';
 import Form from './Components/Form/Form';
+import Formfunctional from './Components/FormFuntional/Formfunctional';
 import MyCounter from './Components/MyCounter/MyCounter';
 import Todo from './Components/Todo/Todo';
 import Main from './Components/UseCallbackUsememo/Main';
@@ -16,9 +17,6 @@ import User from './Components/User/User';
 
 export const MyContext = createContext();
 const App = () =>{
-
-  console.log('app is rendered')
-
   const [show, setShow] = useState(true);
   const quantity = [1,2,3 ,4,5];  
   return(
@@ -76,6 +74,8 @@ const App = () =>{
 
       <div className="callbackcallmenu">
         <Main/>
+        <br />
+        <Formfunctional/>
       </div>
     </div>
   )

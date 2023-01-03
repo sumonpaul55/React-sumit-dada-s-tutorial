@@ -4,7 +4,6 @@ import Showcount from './Showcount';
 import Title from './Title';
 
 const Main = () => {
-    console.log('main js rendered')
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
 
@@ -16,7 +15,7 @@ const Main = () => {
     },[])
     const isEvetOrod = useMemo(()=> {
         let i =0;
-        while(i<500000000)i += 1 //costlty operaiton
+        while(i<1000)i += 1 //costlty operaiton
         return count1 % 2 === 0;
     },[count1]);
     return ( 

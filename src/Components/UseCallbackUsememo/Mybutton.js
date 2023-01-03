@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Mybutton = ({handleclick, children}) => {
-    console.log(children)
     return (
 
         <div>
