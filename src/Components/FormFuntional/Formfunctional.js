@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import ForwordRefInput from './ForwordRefInput';
 
 const Formfunctional = () => {
     const inputRef = React.createRef(null);
@@ -11,7 +12,7 @@ const Formfunctional = () => {
             <h1>this is form functional component</h1>
 
             <div>
-                <input ref={inputRef} type="text" placeholder='Enter something'/>
+                <ForwordRefInput ref={inputRef} type="text" placeholder='Enter something'/>
             </div>
         </div>
     );
