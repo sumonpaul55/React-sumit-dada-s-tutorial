@@ -87,7 +87,7 @@ const App = () =>{
           <ComplexCounter/>
         </div>
       </div>
-      <div className="usereducercontextapi">
+      <div className="usereducercontextapi" style={{padding: '40px'}}>
         <Parentscompomonent />
 
         <Getpost/>
