@@ -8,6 +8,7 @@ import MouseOver from './Components/Composition/EventCounter/MouseOver';
 import Text from './Components/Composition/Text';
 import Context from './Components/Contexts/Context';
 import Counter from './Components/Counter';
+import LayoutComponentOne from './Components/Customhooks/LayoutComponentOne';
 import Form from './Components/Form/Form';
 import Formfunctional from './Components/FormFuntional/Formfunctional';
 import MyCounter from './Components/MyCounter/MyCounter';
@@ -91,10 +92,13 @@ const App = () =>{
       </div>
       <div className="usereducercontextapi" style={{padding: '40px'}}>
         <Parentscompomonent />
-        
+
         <Getpost/>
         
       <GetpostReducer/>
+      </div>
+      <div style={{background: 'lightblue', padding:"20px"}}>
+        <LayoutComponentOne/>
       </div>
     </div>
   )
