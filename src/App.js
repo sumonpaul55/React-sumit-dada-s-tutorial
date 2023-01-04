@@ -14,6 +14,7 @@ import MyCounter from './Components/MyCounter/MyCounter';
 import Todo from './Components/Todo/Todo';
 import Main from './Components/UseCallbackUsememo/Main';
 import User from './Components/User/User';
+import Usereducercounter from './Components/UseReducer/Usereducercounter';
 
 export const MyContext = createContext();
 const App = () =>{
@@ -76,6 +77,10 @@ const App = () =>{
         <Main/>
         <br />
         <Formfunctional/>
+        <div>
+          <h1>Use Reducer Counter</h1>
+          <Usereducercounter />
+        </div>
       </div>
     </div>
   )
