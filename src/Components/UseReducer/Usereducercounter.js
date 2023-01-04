@@ -24,7 +24,10 @@ const Usereducercounter = () => {
             <h3>Count : {count}</h3>
             <button type='button' onClick={()=> dispatch('increament')}>Increament</button>
             <button type='button' onClick={()=> dispatch('decreaament')}>Dncreament</button>
+
+            
         </div>
+
     );
 };
 
