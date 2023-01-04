@@ -14,6 +14,7 @@ import MyCounter from './Components/MyCounter/MyCounter';
 import Todo from './Components/Todo/Todo';
 import Main from './Components/UseCallbackUsememo/Main';
 import User from './Components/User/User';
+import ComplexCounter from './Components/UseReducer/ComplexCounter';
 import Usereducercounter from './Components/UseReducer/Usereducercounter';
 
 export const MyContext = createContext();
@@ -80,6 +81,8 @@ const App = () =>{
         <div>
           <h1>Use Reducer Counter</h1>
           <Usereducercounter />
+          <hr />
+          <ComplexCounter/>
         </div>
       </div>
     </div>
