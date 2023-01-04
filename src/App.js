@@ -16,6 +16,7 @@ import Main from './Components/UseCallbackUsememo/Main';
 import User from './Components/User/User';
 import ComplexCounter from './Components/UseReducer/ComplexCounter';
 import Getpost from './Components/UseReducer/GetPost/Getpost';
+import GetpostReducer from './Components/UseReducer/GetpostReducer';
 import Parentscompomonent from './Components/UseReducer/Parentscompomonent';
 import Usereducercounter from './Components/UseReducer/Usereducercounter';
 
@@ -89,8 +90,8 @@ const App = () =>{
       </div>
       <div className="usereducercontextapi" style={{padding: '40px'}}>
         <Parentscompomonent />
-
         <Getpost/>
+        <GetpostReducer/>
       </div>
     </div>
   )
