@@ -4,7 +4,6 @@ import { CounterContext } from '../UseReducer/Parentscompomonent';
 const ComponentB = () => {
 
     const countContext = useContext(CounterContext);
-
     return (
         <div>
             <h2>ComponentB</h2>

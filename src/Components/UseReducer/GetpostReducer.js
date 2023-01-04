@@ -5,14 +5,13 @@ const initialState = {
     error: '',
     Post : {},
 }
-
 const reducer = (state, action)=>{
     switch(action.type){
         case 'SUCCESS':
             return {
                 loading: false,
-                Post : action.data,
-                error: '',
+                Post: action.data,
+                error: ''
             };        
         case 'ERROR':
             return {
@@ -29,25 +28,24 @@ const GetpostReducer = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
+        fetch('https://jsonplaceholder.typicode.com/odos/1')
            .then(res => res.json())
-           .then(data => {
-               dispatch({type: 'SUCCESS', data: data,})
+           .then((data) => {
+               dispatch({type: 'SUCCESS', data: data});
            })
            .catch(()=>{
-                dispatch({type: 'ERROR'})
-        })
-    }, [])
+            dispatch({type: 'ERROR'});
+           });
+    }, []);
 
     return (
         <div>
             <h2>Get post from jsonpalceholder Api Using Reducer instead of useState</h2>
             <h1>
-                {state.loading ? 'data is loading...' : state.post}
+                {state.loading ? 'data is loading...' : state.post.title}
                 {state.error || null}
                 
             </h1>
-
         </div>
     );
 };

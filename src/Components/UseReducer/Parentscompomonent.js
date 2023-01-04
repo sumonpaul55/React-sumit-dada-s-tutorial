@@ -6,6 +6,7 @@ export const CounterContext = React.createContext();
 
 const initialState = 0;
 const reducer = (state, action)=>{
+    
     switch(action){
         case 'increament':
             return state + 1;
@@ -19,7 +20,6 @@ const reducer = (state, action)=>{
 
 const Parentscompomonent = () => {
     
-
     const [count, dispatch] = useReducer(reducer, initialState)
     return (
         <div>

@@ -50,6 +50,7 @@ const App = () =>{
         {/* <Counter>
            {(count, inCreaseTime)=> <MouseMoveCounter count={count} inCreaseTime={inCreaseTime}/>}
         </Counter> */}
+        
         <Counter>
           {
             (count, inCreaseTime)=> <ClickClounter count={count} inCreaseTime={inCreaseTime}/>
@@ -91,7 +92,8 @@ const App = () =>{
       <div className="usereducercontextapi" style={{padding: '40px'}}>
         <Parentscompomonent />
         <Getpost/>
-        <GetpostReducer/>
+        
+      <GetpostReducer/>
       </div>
     </div>
   )
