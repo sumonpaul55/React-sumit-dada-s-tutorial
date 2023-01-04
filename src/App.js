@@ -91,6 +91,7 @@ const App = () =>{
       </div>
       <div className="usereducercontextapi" style={{padding: '40px'}}>
         <Parentscompomonent />
+        
         <Getpost/>
         
       <GetpostReducer/>
