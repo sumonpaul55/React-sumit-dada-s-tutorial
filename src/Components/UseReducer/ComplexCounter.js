@@ -9,9 +9,9 @@ const reducer = (state, action)=>{
   
     switch(action.type){
         case 'increament':
-            return {counter: state.counter + 1};
+            return {counter: state.counter + action.value};
         case 'decreaament':
-            return {counter: state.counter - 1};
+            return {counter: state.counter - action.value};
         default:
             return {counter: state.counter,};
     }
@@ -24,8 +24,10 @@ const ComplexCounter = () => {
         <div>
             <h2>Icreament & Decreament using useReducer</h2>
             <h3>Count : {count.counter}</h3>
-            <button type='button' onClick={()=> dispatch({type: 'increament'})}>Increament</button>
-            <button type='button' onClick={()=> dispatch({type: 'decreaament'})}>Dncreament</button>
+            <button type='button' onClick={()=> dispatch({type: 'increament', value: 1})}>Increament by 1</button>
+            <button type='button' onClick={()=> dispatch({type: 'decreaament', value: 1})}>Dncreament by 1</button>
+            <button type='button' onClick={()=> dispatch({type: 'increament', value: 5})}>Increament by 5</button>
+            <button type='button' onClick={()=> dispatch({type: 'decreaament', value: 5})}>Dncreament by 5</button>
         </div>
     );
 };
