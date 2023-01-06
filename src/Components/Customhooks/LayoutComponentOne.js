@@ -16,7 +16,7 @@ const LayoutComponentOne = () => {
     })
     return (
         <div>
-            {(onsmallscreen) ? <h1>You are browsing on small screen</h1>: <h1>You are browsing on Big screen </h1>}
+             <h1>You are browsing on {(onsmallscreen)? 'small': 'Large'} screen</h1>
         </div>
     );
 };
