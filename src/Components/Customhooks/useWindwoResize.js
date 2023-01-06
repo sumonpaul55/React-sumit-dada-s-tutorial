@@ -12,7 +12,7 @@ const useWindwoResize = (screensize) => {
         window.addEventListener('resize', checkscreanSize);
 
         return () => window.removeEventListener('resize', checkscreanSize);
-    },[])
+    },[checkscreanSize])
     return onsmallscreen;
 };
 
