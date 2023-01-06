@@ -14,11 +14,7 @@ const useWindwoResize = () => {
         // eslint-disable-next-line no-restricted-globals
         return () => removeEventListener('resize', checkscreanSize);
     })
-    return (
-        <div>
-            
-        </div>
-    );
+    return onsmallscreen;
 };
 
 export default useWindwoResize;
