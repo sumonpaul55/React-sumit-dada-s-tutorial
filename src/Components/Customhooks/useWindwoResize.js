@@ -1,18 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const useWindwoResize = (screensize) => {
     const [onsmallscreen, setonsmallscreen] = useState(false);
 
-   
+    const checkscreanSize = useCallback(()=>{
+        setonsmallscreen(window.innerWidth < screensize);
+    },[screensize])
 
-    useEffect(()=>{
-        const checkscreanSize = ()=>{
-            setonsmallscreen(window.innerWidth < screensize);
-        }
+    useEffect(()=>{       
         checkscreanSize();
         window.addEventListener('resize', checkscreanSize);
         return () => window.removeEventListener('resize', checkscreanSize);
-    },[screensize])
+    },[checkscreanSize])
     return onsmallscreen;
 };
 
