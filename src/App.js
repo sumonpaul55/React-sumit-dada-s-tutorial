@@ -9,6 +9,7 @@ import Text from './Components/Composition/Text';
 import Context from './Components/Contexts/Context';
 import Counter from './Components/Counter';
 import LayoutComponentOne from './Components/Customhooks/LayoutComponentOne';
+import LayoutComponentTwo from './Components/Customhooks/LayoutComponentTwo';
 import Form from './Components/Form/Form';
 import Formfunctional from './Components/FormFuntional/Formfunctional';
 import MyCounter from './Components/MyCounter/MyCounter';
@@ -103,6 +104,7 @@ const App = () =>{
       <div className="custom-hook">
         <h1>Custom hook Create and use</h1>
         <LayoutComponentOne/>
+        <LayoutComponentTwo/>
       </div>
     </div>
   )
