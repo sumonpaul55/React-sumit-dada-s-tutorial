@@ -100,6 +100,10 @@ const App = () =>{
       <div style={{background: 'lightblue', padding:"20px"}}>
         <LayoutComponentOne/>
       </div>
+      <div className="custom-hook">
+        <h1>Custom hook Create and use</h1>
+        <LayoutComponentOne/>
+      </div>
     </div>
   )
 }
