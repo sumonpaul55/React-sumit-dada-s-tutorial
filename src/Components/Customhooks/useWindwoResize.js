@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const useWindwoResize = () => {
+const useWindwoResize = (screensize) => {
     const [onsmallscreen, setonsmallscreen] = useState(false);
 
    const checkscreanSize = ()=>{
-        setonsmallscreen(window.innerWidth < 768)   ;
+        setonsmallscreen(window.innerWidth < screensize);
     }
 
     useEffect(()=>{
         checkscreanSize();
         window.addEventListener('resize', checkscreanSize);
 
-        // eslint-disable-next-line no-restricted-globals
-        return () => removeEventListener('resize', checkscreanSize);
-    })
+        return () => window.removeEventListener('resize', checkscreanSize);
+    },[])
     return onsmallscreen;
 };
 
