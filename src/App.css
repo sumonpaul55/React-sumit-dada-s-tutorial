@@ -52,14 +52,14 @@ button {
   border: 1px solid red;
   margin-top: 10px;
 }
-.wrapper {
+/* .wrapper {
   width: 800px;
   margin: auto;
   padding: 20px;
   border-radius: 5px;
   background-color: #333;
   color: white;
-}
+} */
 
 .card {
   display: flex;
