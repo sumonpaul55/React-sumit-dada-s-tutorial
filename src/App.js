@@ -13,6 +13,8 @@ import LayoutComponentTwo from './Components/Customhooks/LayoutComponentTwo';
 import Form from './Components/Form/Form';
 import Formfunctional from './Components/FormFuntional/Formfunctional';
 import MyCounter from './Components/MyCounter/MyCounter';
+import Card from './Components/StyilingComponents/Card';
+import ContainerStyling from './Components/StyilingComponents/ContainerStyling';
 import Todo from './Components/Todo/Todo';
 import Main from './Components/UseCallbackUsememo/Main';
 import User from './Components/User/User';
@@ -79,7 +81,6 @@ const App = () =>{
           {show ? 'Hide it': 'Show it'}
         </button>
       </div>
-
       <div className="callbackcallmenu">
         <Main/>
         <br />
@@ -93,10 +94,8 @@ const App = () =>{
       </div>
       <div className="usereducercontextapi" style={{padding: '40px'}}>
         <Parentscompomonent />
-
         <Getpost/>
-        
-      <GetpostReducer/>
+        <GetpostReducer/>
       </div>
       <div style={{background: 'lightblue', padding:"20px"}}>
         <LayoutComponentOne/>
@@ -105,6 +104,11 @@ const App = () =>{
         <h1>Custom hook Create and use</h1>
         <LayoutComponentOne/>
         <LayoutComponentTwo/>
+      </div>
+      <div className="card-area">
+        <ContainerStyling>
+           <Card/>
+        </ContainerStyling>
       </div>
     </div>
   )

@@ -43,3 +43,24 @@ button {
   background: #333;
   color: white;
 }
+
+/* styling css start from here */
+
+.card-area {
+  background-color: azure;
+  padding: 20px;
+  border: 1px solid red;
+  margin-top: 10px;
+}
+.wrapper {
+  width: 800px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+}
+
+.card {
+  display: flex;
+}

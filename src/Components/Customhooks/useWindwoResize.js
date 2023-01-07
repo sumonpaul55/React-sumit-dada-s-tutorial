@@ -7,12 +7,12 @@ const useWindwoResize = (screensize) => {
         setonsmallscreen(window.innerWidth < screensize);
     },[screensize])
 
-    useEffect(()=>{       
+    useEffect(()=>{
         checkscreanSize();
         window.addEventListener('resize', checkscreanSize);
         return () => window.removeEventListener('resize', checkscreanSize);
     },[checkscreanSize])
-    return anything;
+    return onsmallscreen;
 };
 
 export default useWindwoResize;
