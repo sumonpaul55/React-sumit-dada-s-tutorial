@@ -1,4 +1,9 @@
 import React, { createContext, useState } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+
+
+
 import '../src/App.css';
 import CheckTemparature from './Components/Checktemparature/Checktemparature';
 import ClockList from './Components/ClockList/ClockList';
@@ -17,6 +22,8 @@ import Card from './Components/StyilingComponents/Card';
 import { ContainerStyling } from './Components/StyilingComponents/Container.style';
 import Todo from './Components/Todo/Todo';
 import Main from './Components/UseCallbackUsememo/Main';
+import About from './Components/UseOfRouter/About';
+import Home from './Components/UseOfRouter/Home';
 import User from './Components/User/User';
 import ComplexCounter from './Components/UseReducer/ComplexCounter';
 import Getpost from './Components/UseReducer/GetPost/Getpost';
@@ -26,10 +33,14 @@ import Usereducercounter from './Components/UseReducer/Usereducercounter';
 
 export const MyContext = createContext();
 const App = () =>{
+  <Router>
+    <Route path='/' component={Home}/>
+    <Route path='/:about' component={<About/>}/>
+  </Router>  
+
   const [show, setShow] = useState(true);
   const quantity = [1,2,3 ,4,5];  
   return(
-    
     <div className='main-hero'>
       <div className='clockitems'>
       <ClockList quantity={quantity}/>
@@ -110,6 +121,7 @@ const App = () =>{
            <Card/>
         </ContainerStyling>
       </div>
+      
     </div>
   )
 }
