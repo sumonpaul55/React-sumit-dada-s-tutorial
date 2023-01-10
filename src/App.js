@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 
@@ -24,6 +24,7 @@ import Todo from './Components/Todo/Todo';
 import Main from './Components/UseCallbackUsememo/Main';
 import About from './Components/UseOfRouter/About';
 import Home from './Components/UseOfRouter/Home';
+import Servise from './Components/UseOfRouter/Servise';
 import User from './Components/User/User';
 import ComplexCounter from './Components/UseReducer/ComplexCounter';
 import Getpost from './Components/UseReducer/GetPost/Getpost';
@@ -33,10 +34,14 @@ import Usereducercounter from './Components/UseReducer/Usereducercounter';
 
 export const MyContext = createContext();
 const App = () =>{
-  <Router>
-    <Route path='/' component={Home}/>
-    <Route path='/:about' component={<About/>}/>
-  </Router>  
+  <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route path="about" element={<About />} />
+          <Route path="service" element={<Servise />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
 
   const [show, setShow] = useState(true);
   const quantity = [1,2,3 ,4,5];  
