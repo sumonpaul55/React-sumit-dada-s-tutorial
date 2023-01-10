@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Titlestyle from "./Title";
 
 export const ContainerStyling = styled.div`
 width: 800px;
@@ -11,4 +12,12 @@ color: white;
 
 export const CardContainer = styled.div`
     display: flex;
-`
+`;
+export const styledButton = styled.button`
+    background: blue;
+`;
+export const StyledTitle = styled(Titlestyle)`  
+    background-color: red;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+`;
