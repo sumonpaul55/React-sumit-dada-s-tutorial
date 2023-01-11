@@ -1,134 +1,17 @@
-import React, { createContext, useState } from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-
-
-
-
-import '../src/App.css';
-import CheckTemparature from './Components/Checktemparature/Checktemparature';
-import ClockList from './Components/ClockList/ClockList';
-import Emoji from './Components/Composition/Emoji';
-import ClickClounter from './Components/Composition/EventCounter/ClickCounter';
-import MouseOver from './Components/Composition/EventCounter/MouseOver';
-import Text from './Components/Composition/Text';
-import Context from './Components/Contexts/Context';
-import Counter from './Components/Counter';
-import LayoutComponentOne from './Components/Customhooks/LayoutComponentOne';
-import LayoutComponentTwo from './Components/Customhooks/LayoutComponentTwo';
-import Form from './Components/Form/Form';
-import Formfunctional from './Components/FormFuntional/Formfunctional';
-import MyCounter from './Components/MyCounter/MyCounter';
-import Card from './Components/StyilingComponents/Card';
-import { ContainerStyling } from './Components/StyilingComponents/Container.style';
-import Todo from './Components/Todo/Todo';
-import Main from './Components/UseCallbackUsememo/Main';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './Components/UseOfRouter/About';
-import Home from './Components/UseOfRouter/Home';
-import Servise from './Components/UseOfRouter/Servise';
-import User from './Components/User/User';
-import ComplexCounter from './Components/UseReducer/ComplexCounter';
-import Getpost from './Components/UseReducer/GetPost/Getpost';
-import GetpostReducer from './Components/UseReducer/GetpostReducer';
-import Parentscompomonent from './Components/UseReducer/Parentscompomonent';
-import Usereducercounter from './Components/UseReducer/Usereducercounter';
+import Home from './Home';
 
-export const MyContext = createContext();
-const App = () =>{
-  <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="about" element={<About />} />
-          <Route path="service" element={<Servise />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-
-  const [show, setShow] = useState(true);
-  const quantity = [1,2,3 ,4,5];  
-  return(
-    <div className='main-hero'>
-      <div className='clockitems'>
-      <ClockList quantity={quantity}/>
-      </div>
-      <div>
-      <h2 style={{textAlign: 'center'}}>Form's default behaviur will not work for React</h2>
-          <Form/>
-      </div>
-      <div className='temparatureinput-main'>
-        <h1>Aplicaiton for check the water temperature</h1>
-        <CheckTemparature/> 
-      </div>
-      <Emoji>
-        {({addEmoji})=><Text addEmoji={addEmoji}/>}
-      </Emoji>
-      <div className="click-couter">
-        {/* <ClickCounter />
-        <br />
-        <MouseOver /> */}
-        {/* <Counter render={(count, inCreaseTime)=> <ClickClounter count={count} inCreaseTime={inCreaseTime}/>}/>
-        <Counter render={(count, inCreaseTime)=> <MouseOver count={count} inCreaseTime={inCreaseTime}/> }/> */}
-        {/* <Counter>
-           {(count, inCreaseTime)=> <MouseMoveCounter count={count} inCreaseTime={inCreaseTime}/>}
-        </Counter> */}
-        
-        <Counter>
-          {
-            (count, inCreaseTime)=> <ClickClounter count={count} inCreaseTime={inCreaseTime}/>
-          }
-        </Counter>
-        <Counter>
-          {
-            (count, inCreaseTime)=> <MouseOver count={count} inCreaseTime={inCreaseTime}/>
-          }
-        </Counter>
-        <MyContext.Provider value={'Sumon chandra pual is Sent through context API'}>
-          <Context />
-        </MyContext.Provider>
-        <h6>Mouseover count Using heigher order component name is withcounter</h6>
-        <User name={(isloggedIn) =>isloggedIn ? 'Sumon paul': 'Guest'}/>
-      </div>
-      <div className='todo'>
-          <Todo/>
-      </div>
-      <div className="mycounter">
-        { show && <MyCounter/>}
-        <br />
-        <button onClick={()=> setShow((prevshow)=> !prevshow)} type='button'>
-          {show ? 'Hide it': 'Show it'}
-        </button>
-      </div>
-      <div className="callbackcallmenu">
-        <Main/>
-        <br />
-        <Formfunctional/>
-        <div>
-          <h1>Use Reducer Counter</h1>
-          <Usereducercounter />
-          <hr />
-          <ComplexCounter/>
-        </div>
-      </div>
-      <div className="usereducercontextapi" style={{padding: '40px'}}>
-        <Parentscompomonent />
-        <Getpost/>
-        <GetpostReducer/>
-      </div>
-      <div style={{background: 'lightblue', padding:"20px"}}>
-        <LayoutComponentOne/>
-      </div>
-      <div className="custom-hook">
-        <h1>Custom hook Create and use</h1>
-        <LayoutComponentOne/>
-        <LayoutComponentTwo/>
-      </div>
-      <div className="card-area">
-        <ContainerStyling>
-           <Card/>
-        </ContainerStyling>
-      </div>
-      
-    </div>
-  )
-}
+const App = () => {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Home/>}/> 
+                <Route path='about' element={<About/>}/> 
+            </Routes>
+        </BrowserRouter>
+    );
+};
 
 export default App;

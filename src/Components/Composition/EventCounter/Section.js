@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MyContext } from '../../../App';
+import { MyContext } from '../../../Home';
 
 class Section extends Component {
 
