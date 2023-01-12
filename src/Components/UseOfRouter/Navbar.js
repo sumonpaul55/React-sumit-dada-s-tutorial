@@ -13,6 +13,7 @@ const Navbar = () => {
                 <li><NavLink to='/' style={({isActive})=> isActive? activeStyle : undefined} >Home</NavLink></li>
                 <li><NavLink to='about' style={({isActive})=> isActive? activeStyle : undefined} >About</NavLink></li>
                 <li><NavLink to='service' style={({isActive})=> isActive? activeStyle : undefined} >Service</NavLink></li>
+                <li><NavLink to='post/js' style={({isActive})=> isActive? activeStyle : undefined} >Javascript</NavLink></li>
             </ul>
         </nav>
     );
