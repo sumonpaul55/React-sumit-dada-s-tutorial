@@ -16,7 +16,7 @@ const App = () => {
         <Route exact path="home" element={<Home />} />
         <Route exact path="about" element={<About />} />
         <Route exact path="service" element={<Servise />} />
-        <Route exact path="post/js" element={<Post />} />
+        <Route exact path="post/:category" element={<Post />} />
         <Route exact path="*" element={<PageNotFound/>}/>
       </Routes>
         
